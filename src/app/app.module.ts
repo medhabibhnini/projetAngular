@@ -3,33 +3,32 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { ProductComponent } from './product/product.component';
-import { CategorieComponent } from './categorie/categorie.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
-import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
-import { ProfileComponent } from './profile/profile.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { UserCrudComponent } from './admin/user-crud/user-crud.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    ProductComponent,
-    CategorieComponent,
-    LoginComponent,
-    RegisterComponent,
     HomeComponent,
-    AdmindashboardComponent,
-    ProfileComponent
+    AdminDashboardComponent,
+    AdminLoginComponent,
+    UserCrudComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
